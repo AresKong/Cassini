@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vDF-n4-POF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0Yc-Oh-M8b">
+            <objects>
+                <navigationController id="OvE-U3-tso" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iXS-SD-oEz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P7C-V3-U3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLq-BC-ocZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="-342"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="SX1-rs-hWv">
+            <objects>
+                <viewController id="vh4-eW-fnL" customClass="ImageViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lyF-RC-cmu"/>
+                        <viewControllerLayoutGuide type="bottom" id="NSD-fY-e56"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C2d-Bv-z0t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-gh-bAN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nxv-8S-H7K">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nxv-8S-H7K" firstAttribute="centerY" secondItem="C2d-Bv-z0t" secondAttribute="centerY" id="Zx2-vZ-2Cn"/>
+                            <constraint firstAttribute="trailing" secondItem="Yvo-gh-bAN" secondAttribute="trailing" id="jaK-ea-RyZ"/>
+                            <constraint firstItem="nxv-8S-H7K" firstAttribute="centerX" secondItem="C2d-Bv-z0t" secondAttribute="centerX" id="k7f-XK-Dc2"/>
+                            <constraint firstItem="Yvo-gh-bAN" firstAttribute="leading" secondItem="C2d-Bv-z0t" secondAttribute="leading" id="lkB-RK-5wr"/>
+                            <constraint firstItem="Yvo-gh-bAN" firstAttribute="top" secondItem="C2d-Bv-z0t" secondAttribute="top" id="pNM-Aj-vZl"/>
+                            <constraint firstItem="Yvo-gh-bAN" firstAttribute="bottom" secondItem="NSD-fY-e56" secondAttribute="top" id="u54-FE-C4x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Yvo-gh-bAN" id="4cZ-L7-w9f"/>
+                        <outlet property="spinner" destination="nxv-8S-H7K" id="ael-1K-xSA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m4f-Iw-a3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="614"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="ueH-ng-azR">
+            <objects>
+                <splitViewController id="vDF-n4-POF" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="OvE-U3-tso" kind="relationship" relationship="masterViewController" id="7Ia-VG-U1g"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNa-eb-i6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-967" y="31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg2-vi-SIo">
+                                <rect key="frame" x="257" y="334" width="87" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Arctic"/>
+                                <connections>
+                                    <segue destination="vh4-eW-fnL" kind="showDetail" identifier="Arctic" id="AzT-hA-7Cp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNF-a8-dBT">
+                                <rect key="frame" x="224" y="273" width="153" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Antarctica"/>
+                                <connections>
+                                    <segue destination="vh4-eW-fnL" kind="showDetail" identifier="Antarctica" id="oYW-Q1-kw9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17w-py-mdr">
+                                <rect key="frame" x="262" y="212" width="77" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Pluto"/>
+                                <connections>
+                                    <segue destination="vh4-eW-fnL" kind="showDetail" identifier="Pluto" id="PSe-g4-qoq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oNF-a8-dBT" firstAttribute="top" secondItem="17w-py-mdr" secondAttribute="bottom" constant="8" symbolic="YES" id="KH7-lC-wFp"/>
+                            <constraint firstItem="Wg2-vi-SIo" firstAttribute="top" secondItem="oNF-a8-dBT" secondAttribute="bottom" constant="8" symbolic="YES" id="n1o-Fz-J3Y"/>
+                            <constraint firstItem="17w-py-mdr" firstAttribute="centerX" secondItem="oNF-a8-dBT" secondAttribute="centerX" id="rfm-SN-Plw"/>
+                            <constraint firstItem="oNF-a8-dBT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rwg-Bf-U9q"/>
+                            <constraint firstItem="Wg2-vi-SIo" firstAttribute="centerX" secondItem="oNF-a8-dBT" secondAttribute="centerX" id="xoJ-yM-IsD"/>
+                            <constraint firstItem="oNF-a8-dBT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yvP-72-TBf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rt7-8n-Whf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="-342"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AzT-hA-7Cp"/>
+    </inferredMetricsTieBreakers>
+</document>
